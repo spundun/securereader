@@ -6,6 +6,7 @@ import info.guardianproject.yakreader.ui.MediaViewCollection;
 import info.guardianproject.yakreader.ui.UICallbacks;
 import info.guardianproject.yakreader.uiutil.AnimationHelpers;
 import info.guardianproject.yakreader.uiutil.AnimationHelpers.FadeInFadeOutListener;
+import info.guardianproject.yakreader.uiutil.UIHelpers;
 import info.guardianproject.yakreader.views.CreateAccountView;
 import info.guardianproject.yakreader.views.PostSignInView;
 import info.guardianproject.yakreader.views.StoryMediaContentView;
@@ -406,7 +407,7 @@ public class AddPostActivity extends FragmentActivityWithMenu implements OnActio
 		}
 
 		MediaViewCollection collection = new MediaViewCollection(mMediaView.getContext(), mStory);
-		collection.load(true, true);
+		collection.load(true, false);
 		mMediaView.setMediaCollection(collection, false, false);
 	}
 
@@ -733,7 +734,7 @@ public class AddPostActivity extends FragmentActivityWithMenu implements OnActio
 
 		// Update the media view to show new media as well
 		MediaViewCollection collection = new MediaViewCollection(mMediaView.getContext(), mStory);
-		collection.load(true, true);
+		collection.load(true, false);
 		mMediaView.setMediaCollection(collection, false, false);
 		updateMediaControls();
 	}
@@ -950,14 +951,12 @@ public class AddPostActivity extends FragmentActivityWithMenu implements OnActio
 			tv.setText(info.loadLabel(pm));
 
 			Drawable icon = info.loadIcon(pm);
+			int iconSize = UIHelpers.dpToPx(32, getContext());
+			icon.setBounds(0, 0, iconSize, iconSize);
 
 			// Put the image on the TextView
-			tv.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null);
-
-			// Add margin between image and text (support various screen
-			// densities)
-			int dp5 = (int) (5 * getResources().getDisplayMetrics().density + 0.5f);
-			tv.setCompoundDrawablePadding(dp5);
+			tv.setCompoundDrawables(icon, null, null, null);
+			tv.setCompoundDrawablePadding(UIHelpers.dpToPx(10, getContext()));
 
 			return v;
 		}

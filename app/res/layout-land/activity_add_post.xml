@@ -1,5 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/info.guardianproject.bigbuffalo"
+    xmlns:app="http://schemas.android.com/apk/res/info.guardianproject.yakreader"
     android:id="@+id/frame1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,12 +20,18 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5" >
 
-            <include
-                android:id="@+id/mediaContentView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                layout="@layout/story_media_content_view" />
-
+            <info.guardianproject.yakreader.widgets.HeightLimitedRelativeLayout
+				android:id="@+id/layout_media"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		app:height_limit="1.75" >
+        				
+            	<include
+                	android:id="@+id/mediaContentView"
+                	android:layout_width="match_parent"
+                	android:layout_height="match_parent"
+                	layout="@layout/story_media_content_view" />
+			</info.guardianproject.yakreader.widgets.HeightLimitedRelativeLayout>
             <ImageView
                 android:id="@+id/btnMediaAdd"
                 android:layout_width="wrap_content"
@@ -37,7 +43,7 @@
                                 android:id="@+id/llOperationButtons"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/mediaContentView"
+                                android:layout_alignBottom="@id/layout_media"
                                 android:layout_gravity="bottom|center_horizontal"
                                 android:layout_margin="10dp"
                                 android:background="@drawable/popup_toolbar_background"
