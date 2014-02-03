@@ -97,7 +97,7 @@
             android:noHistory="true" >
         </activity>
         <activity
-            android:name="info.guardinfo.guardianproject.yakreader.installer.HTTPDAppSender"    
+            android:name="info.guardianproject.yakreader.installer.HTTPDAppSender"    
             android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
@@ -113,16 +113,18 @@
         </service>
 
         <activity
-            android:name="info.guardiainfo.guardianproject.yakreader.installer.SecureBluetoothSenderActivity"
-            android:label="@string/title_activity_secure_blue_tooth_sender" >
+            android:name="info.guardianproject.yakreader.installer.SecureBluetoothSenderActivity"
+            android:label="@string/title_activity_secure_blue_tooth_sender"
+            android:theme="@style/AppTheme.Transparent" >
         </activity>
         <activity
-            android:name="info.guardiainfo.guardianproject.yakreader.installer.SecureBluetoothReceiverActivity"
-            android:label="@string/title_activity_secure_blue_tooth_receiver" >
+            android:name="info.guardianproject.yakreader.installer.SecureBluetoothReceiverActivity"
+            android:label="@string/title_activity_secure_blue_tooth_receiver"
+            android:theme="@style/AppTheme.Transparent" >
         </activity>
         
         <activity
-            android:name="info.guardiainfo.guardianproject.yakreader.installer.SecureShareReceiveActivity"
+            android:name="info.guardianproject.yakreader.installer.SecureShareReceiveActivity"
             android:label="@string/title_secure_share_receive" >
 			<intent-filter>
                 <action android:name="android.intent.action.VIEW" />
