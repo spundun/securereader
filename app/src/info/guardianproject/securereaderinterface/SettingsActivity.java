@@ -33,7 +33,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import info.guardianproject.securereaderinterface.R;
+import info.guardianproject.paik.R;
 
 public class SettingsActivity extends FragmentActivityWithMenu
 {

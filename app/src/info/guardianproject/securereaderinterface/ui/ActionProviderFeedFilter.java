@@ -24,7 +24,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 
 import com.actionbarsherlock.view.ActionProvider;
-import info.guardianproject.securereaderinterface.R;
+import info.guardianproject.paik.R;
 
 import com.tinymission.rss.Feed;
 

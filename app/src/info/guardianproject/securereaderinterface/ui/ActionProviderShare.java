@@ -2,7 +2,7 @@ package info.guardianproject.securereaderinterface.ui;
 
 import info.guardianproject.securereaderinterface.App;
 import info.guardianproject.securereaderinterface.adapters.ShareSpinnerAdapter;
-import info.guardianproject.securereaderinterface.R;
+import info.guardianproject.paik.R;
 
 import org.holoeverywhere.widget.AdapterView;
 import org.holoeverywhere.widget.Spinner;
