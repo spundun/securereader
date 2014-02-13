@@ -1059,7 +1059,7 @@ public class AddPostActivity extends FragmentActivityWithMenu implements OnActio
 			}
 			info.intent.setClassName(info.resolveInfo.activityInfo.packageName, info.resolveInfo.activityInfo.name);
 			mStartedIntent = info.intent;
-			startActivityForResultAsInternal(info.intent, REQ_CODE_PICK_IMAGE);
+			startActivityForResult(info.intent, REQ_CODE_PICK_IMAGE);
 			mMediaChooserDialog.dismiss();
 		}
 		catch (IOException e)
